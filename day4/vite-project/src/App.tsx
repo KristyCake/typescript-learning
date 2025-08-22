@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import UiPanel from './stores/UiPanel';
+// import Lab5 from './component/Lab5'
+// import Lab6 from './component/Lab6'
+// import Lab7 from './component/Lab7';
+// import Lab8 from './component/Lab8';
+// import Lab9 from './component/Lab9';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <UiPanel />
+        {/* <Lab9 /> */}
+        {/* {<Lab8 />} */}
+        {/* {<Lab7 />} */}
+        {/* {<Lab6 />} */}
+        {/* {<Lab5 />} */}
+        <style>{css}</style>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
 export default App
+
+const css = `
+  .error { color: #c0392b; margin: 0; }
+  input { padding: 8px; border: 1px solid #ddd; border-radius: 6px; }
+  label { font-weight: 600; }
+  button { padding: 10px 14px; border: none; border-radius: 8px; background: #0d6efd; color: white; }
+`;
